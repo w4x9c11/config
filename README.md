@@ -1,1 +1,1 @@
-# zed-config
+# ZED IDE
