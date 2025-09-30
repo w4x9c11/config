@@ -11,12 +11,15 @@
   "buffer_font_family": "Noto Sans Mono",
   "ui_font_size": 16,
   "ui_font_family": "Noto Sans Mono",
-  "buffer_font_size": 16.5,
-  "icon_theme": "Zed (Default)",
+  "buffer_font_size": 18.3,
+  "icon_theme": "Bearded Icon Theme",
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
     "dark": "VSCode Dark Polished"
+  },
+  "file_types": {
+    "CMake": ["CMakeLists.txt"]
   },
   "indent_guides": {
     "enabled": false,
@@ -45,6 +48,7 @@
     "indent_guides": {
       "show": "never"
     },
+
     "hide_root": false,
     "starts_open": false
   },
@@ -59,17 +63,15 @@
   "format_on_save": "off", // 禁用保存格式化
   "inline_code_actions": false, // 显示内联代码操作
   "lsp_highlight_debounce": 100,
-
   "title_bar": {
     "show_branch_icon": false,
     "show_branch_name": false,
     "show_project_items": false,
-    "show_onboarding_banner": true,
+    "show_onboarding_banner": false,
     "show_user_picture": true,
-    "show_sign_in": true,
+    "show_sign_in": false,
     "show_menus": false
   },
-
   // === 应用行为 ===
   "auto_update": false, // 禁用自动更新
   "confirm_quit": true, // 退出软件确认
