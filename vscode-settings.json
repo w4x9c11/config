@@ -1,0 +1,313 @@
+{
+    // ==========================
+    // C/C++ 插件相关设置
+    // ==========================
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.autocomplete": "default",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.formatting": "default",
+    "C_Cpp.enhancedColorization": "enabled",
+    "C_Cpp.codeFolding": "disabled",
+    "C_Cpp.navigation": "Enabled",
+    // 优化性能
+    "C_Cpp.loggingLevel": "None", // 避免输出大量日志
+    "C_Cpp.inactiveRegionOpacity": 0.5, // 不影响性能，只影响视觉
+    "C_Cpp.intelliSenseCacheSize": 8192, // 增大缓存，提高大型项目体验
+    "C_Cpp.default.intelliSenseMode": "windows-msvc-x64",
+    // "C_Cpp.default.systemIncludePath": [
+    //     "E:/IDE/MSVC/Insiders/VC/Tools/MSVC/14.50.35503/include",
+    //     "E:/Windows Kits/10/Include/10.0.26100.0/ucrt",
+    //     "E:/Windows Kits/10/Include/10.0.26100.0/shared",
+    //     "E:/Windows Kits/10/Include/10.0.26100.0/um"
+    // ],
+    "C_Cpp.default.windowsSdkVersion": "10.0.22621.0",
+    "C_Cpp.clang_format_style": "Microsoft",
+    "C_Cpp.clang_format_fallbackStyle": "Microsoft",
+    "files.associations": {
+        "*.c": "c",
+        "*.h": "c",
+        "*.cpp": "cpp",
+        "*.hpp": "cpp"
+    },
+    "files.autoSave": "onFocusChange", // 自动保存，减少 IntelliSense 重复解析
+    // "[cpp]": { "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd" },
+    // ==========================
+    // Clangd 配置
+    // ==========================
+    "clangd.enabled": false,
+    // "clangd.path": "E:\\IDE\\clangd\\bin\\clangd.exe",
+    // "clangd.showStatus": true,
+    // "clangd.inactiveRegions.opacity": 0.3,
+    // "clangd.checkUpdates": false,
+    // "clangd.onConfigChanged": "restart",
+    // "clangd.serverCompletionRanking": false,
+    // "clangd.restartAfterCrash": true,
+    // "clangd.fallbackFlags": ["-std=c++20"],
+    // "clangd.arguments": [
+    //     "--background-index",                // 背景索引
+    //     "--completion-style=bundled",       // 自动补全风格
+    //     "--header-insertion=never",         // 不自动插入头文件
+    //     "--compile-commands-dir=${workspaceFolder}/build", // cmake 或 xmake 构建目录
+    //     "--pch-storage=disk",               // 预编译头存储到磁盘，减少内存占用
+    //     "--j=8",                            // 使用 4 个线程，可根据 CPU 调整
+    //     "--limit-results=30",               // 自动补全结果限制
+    //     "--limit-references=30",            // 查找引用限制
+    //     "--resource-dir=E:/IDE/clangd/lib/clang/20/include", // Clang 内置头文件路径
+    //     "--log=error",                      // 只输出错误日志
+    //     "--enable-config",                  // 允许 clangd 配置文件
+    //     "--completion-parse=auto",          // 智能补全解析
+    //     "--ranking-model=heuristics",       // 补全排序启发式
+    //     "--header-insertion-decorators=false",
+    //     "--function-arg-placeholders=false",
+    //     "--all-scopes-completion=false",
+    //     "--pretty=false",
+    //     "--clang-tidy"                      // 启用 clang-tidy
+    // ],
+    "editor.formatOnSave": false,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    // ==========================
+    // 编辑器外观
+    // ==========================
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "blink",
+    "editor.fontFamily": "Noto Sans Mono Medium",
+    "chat.editor.fontFamily": "Noto Sans Mono Medium",
+    "chat.fontFamily": "Noto Sans Mono Medium",
+    "editor.codeLensFontFamily": "Noto Sans Mono Medium",
+    "editor.inlayHints.fontFamily": "Noto Sans Mono Medium",
+    "editor.inlineSuggest.fontFamily": "Noto Sans Mono Medium",
+    "debug.console.fontFamily": "Noto Sans Mono Medium",
+    "scm.inputFontFamily": "Noto Sans Mono Medium",
+    "editor.fontSize": 18.3,
+    "terminal.integrated.fontSize": 18,
+    "debug.console.fontSize": 15,
+    "editor.renderWhitespace": "none",
+    "editor.smoothScrolling": false,
+    "editor.mouseWheelScrollSensitivity": 5,
+    "editor.wordWrap": "on",
+    // "workbench.colorCustomizations": {
+    //     "editor.lineHighlightBackground": "#292947",
+    //     "editor.selectionBackground": "#3a3c5a"
+    // },
+    "editor.semanticHighlighting.enabled": false,
+    // "editor.semanticTokenColorCustomizations": {
+    //     "enabled": true,
+    //     "rules": {
+    //         "class": "#4EC9B0",
+    //         "type": "#4EC9B0",
+    //         "enum": "#4EC9B0",
+    //         "function": "#DCDCAA",
+    //         "method": "#DCDCAA",
+    //         "property": "#9CDCFE",
+    //         "variable": "#9CDCFE",
+    //         "parameter": "#9CDCFE",
+    //         "namespace": "#4EC9B0",
+    //         "macro": "#ca8bcf",
+    //         "comment": "#6A9955",
+    //         "string": "#CE9178",
+    //         "keyword": "#569CD6",
+    //         "number": "#B5CEA8",
+    //         "operator": "#D4D4D4"
+    //     }
+    // },
+    // ==========================
+    // 编辑器功能设置
+    // ==========================
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "off",
+        "strings": "off"
+    },
+    "window.restoreWindows": "none",
+    "breadcrumbs.enabled": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.parameterHints.enabled": false,
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": false,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.renderIndicatorMargin": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.overviewRulerBorder": false,
+    "editor.links": false,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.accessibilitySupport": "off",
+    "editor.renderControlCharacters": false,
+    "editor.find.history": "never",
+    "editor.lineNumbers": "on",
+    "editor.largeFileOptimizations": true,
+    // ==========================
+    // 终端设置
+    // ==========================
+    "terminal.integrated.encoding": "utf8",
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.smoothScrolling": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.gpuAcceleration": "off",
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": "C:\\Windows\\System32\\cmd.exe",
+            "args": [
+                "/k",
+                "chcp 65001"
+            ]
+        }
+    },
+    // ==========================
+    // 文件处理
+    // ==========================
+    "files.encoding": "utf8",
+    "files.candidateGuessEncodings": [
+        "utf8",
+        // "gb2312"
+    ],
+    "GBK2UTF8.ignoreDir": "node_modules,.vscode,.idea,.vscode-test,.github,build,.xmake",
+    "files.maxMemoryForLargeFilesMB": 512,
+    "files.useExperimentalFileWatcher": false,
+    "files.participants.timeout": 5000,
+    "files.hotExit": "off",
+    "files.refactoring.autoSave": false,
+    "files.restoreUndoStack": false,
+    "files.watcherExclude": {
+        "**/node_modules/**": true,
+        "**/.git/**": true,
+        "**/build/**": true,
+        "**/out/**": true,
+        "**/dist/**": true,
+        "**/.cache/**": true
+    },
+    "files.exclude": {
+        "**/.hg": true,
+        "**/.svn": true
+    },
+    // ==========================
+    // 工作区设置
+    // ==========================
+    "cmake.buildOutput": "terminal",
+    "cmake.generator": "Ninja", // 或 "Visual Studio 17 2022"
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureSettings": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+    },
+    "workbench.tree.indent": 12,
+    "workbench.enableExperiments": false,
+    "workbench.editor.limit.value": 5,
+    "workbench.editor.restoreViewState": false,
+    "workbench.localHistory.enabled": false,
+    "workbench.editorAssociations": {
+        "*.cpp": "default",
+        "*.h": "default"
+    },
+    "workbench.enableHotExit": false,
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.limit.enabled": false,
+    "workbench.reduceMotion": "on",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.cloudChanges.autoResume": "off",
+    "workbench.commandPalette.history": 0,
+    "workbench.view.showQuietly": {
+        "workbench.panel.output": true
+    },
+    "workbench.tips.enabled": false,
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.list.smoothScrolling": false,
+    "workbench.editor.enablePreview": false,
+    // ==========================
+    // 搜索设置
+    // ==========================
+    "search.maxResults": 200,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/dist": true
+    },
+    "search.followSymlinks": false,
+    "search.searchOnType": false,
+    // ==========================
+    // 性能和更新相关
+    // ==========================
+    "telemetry.telemetryLevel": "off",
+    "update.mode": "start",
+    "update.showReleaseNotes": false,
+    "update.enableWindowsBackgroundUpdates": false,
+    "extensions.autoUpdate": false,
+    "extensions.ignoreRecommendations": true,
+    // ==========================
+    // 文件资源管理器优化
+    // ==========================
+    "explorer.compactFolders": false,
+    "explorer.decorations.colors": false,
+    "explorer.autoOpenDroppedFile": false,
+    "explorer.sortOrderLexicographicOptions": "upper",
+    // ==========================
+    // Git 和源码管理
+    // ==========================
+    "git.autorefresh": false,
+    "git.decorations.enabled": false,
+    "scm.diffDecorations": "none",
+    // ==========================
+    // JavaScript / TypeScript
+    // ==========================
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "javascript.suggest.autoImports": false,
+    "typescript.suggest.autoImports": false,
+    "javascript.suggest.enabled": false,
+    // ==========================
+    // HTML / CSS / 相关验证
+    // ==========================
+    // "html.autoClosingTags": false,
+    // "css.validate": false,
+    // "less.validate": false,
+    // "scss.validate": false,
+    // ==========================
+    // 可访问性和提示
+    // ==========================
+    "accessibility.signalOptions.volume": 100,
+    "accessibility.dimUnfocused.opacity": 0.5,
+    "accessibility.signals.lineHasError": {
+        "sound": "on"
+    },
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "on"
+    },
+    "accessibility.signals.clear": {
+        "sound": "on"
+    },
+    // ==========================
+    // 调试
+    // ==========================
+    "debug.allowBreakpointsEverywhere": true,
+    // ==========================
+    // 其他
+    // ==========================
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "notebook.cellFailureDiagnostics": false,
+    "github.copilot.chat.localeOverride": "zh-CN",
+    "chat.editing.alwaysSaveWithGeneratedChanges": true,
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    // ==========================
+    // GitHub Copilot
+    // ==========================
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "cmake": true
+    },
+    // ==========================
+    // xmake
+    // ==========================
+    "xmake.runMode": "buildRun",
+    "xmake.workingDirectory": "${workspaceRoot}/",
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+}
