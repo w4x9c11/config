@@ -28,7 +28,7 @@
         "*.h": "c",
         "*.cpp": "cpp",
         "*.hpp": "cpp"
-    },
+    }, 
     "files.autoSave": "onFocusChange", // 自动保存，减少 IntelliSense 重复解析
     // "[cpp]": { "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd" },
     // ==========================
