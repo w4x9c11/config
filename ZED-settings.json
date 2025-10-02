@@ -11,8 +11,22 @@
   "buffer_font_family": "Noto Sans Mono",
   "ui_font_size": 16,
   "ui_font_family": "Noto Sans Mono",
-  "buffer_font_size": 18.3,
-  "icon_theme": "Bearded Icon Theme",
+  "buffer_font_size": 16.8,
+  // "icon_theme": "Bearded Icon Theme",
+  "restore_on_startup": "none",
+  "soft_wrap": "none",
+  "formatter": "prettier",
+  "completions": {
+    "words": "disabled",
+    "lsp": true,
+    "lsp_fetch_timeout_ms": 150,
+    "lsp_insert_mode": "insert"
+  },
+  "notification_panel": {
+    "button": true,
+    "dock": "right",
+    "default_width": 380
+  },
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
@@ -41,7 +55,7 @@
     "auto_fold_dirs": true,
     "drag_and_drop": true,
     "scrollbar": {
-      "show":"never"
+      "show": "never"
     },
     "sticky_scroll": false,
     "show_diagnostics": "errors",
@@ -87,17 +101,17 @@
 
   // === 界面元素 ===
   "scrollbar": {
-    "show": "never"
-    // "cursors": false,
-    // "git_diff": false,
-    // "search_results": true,
-    // "selected_text": true,
-    // "selected_symbol": true,
-    // "diagnostics": "warning",
-    // "axes": {
-    //   "horizontal": false,
-    //   "vertical": true
-    // }
+    "show": "always",
+    "cursors": true,
+    "git_diff": false,
+    "search_results": false,
+    "selected_text": false,
+    "selected_symbol": false,
+    "diagnostics": "warning",
+    "axes": {
+      "horizontal": false,
+      "vertical": true
+    }
   },
 
   // 标签栏
@@ -120,7 +134,7 @@
   "lsp": {
     "clangd": {
       "binary": {
-        "path": "E:\\IDE\\clangd\\bin\\clangd.exe",
+        "path": "E:\\deve\\clangd\\bin\\clangd.exe",
         "arguments": [
           "--background-index", // 背景索引
           "--completion-style=bundled", // 自动补全风格
