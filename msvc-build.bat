@@ -11,6 +11,6 @@ if "%CONFIG%"=="" (
 cmake -S . -B build/%CONFIG% -G "Ninja" -DCMAKE_BUILD_TYPE=%CONFIG%
 cmake --build build/%CONFIG%
 
-echo ===============================
+echo =============================== 
 echo Build %CONFIG% Success.
 echo ===============================
