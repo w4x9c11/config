@@ -1,0 +1,12 @@
+CompileFlags:
+  CompilationDatabase: .
+  Add:
+    - --driver-mode=cl
+    - -fms-compatibility
+    - -fms-extensions
+    - -fdelayed-template-parsing
+  Remove:
+    - -m*
+Index:
+  Background: Build
+  StandardLibrary: true
