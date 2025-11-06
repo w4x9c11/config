@@ -1,208 +1,234 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
   // === 字体与界面 ===
-  "buffer_font_family": "Noto Sans Mono",
-  "ui_font_size": 16,
-  "ui_font_family": "Noto Sans Mono",
-  "buffer_font_size": 16.8,
-  // "icon_theme": "Bearded Icon Theme",
-  "restore_on_startup": "none",
-  "soft_wrap": "none",
-  "formatter": "prettier",
+  "theme": "Catppuccin Mocha - No Italics",
+  "buffer_font_features": {
+    "calt": 0 // 禁用连字（contextual alternates）
+  },
+  "linked_edits": false, // 禁用同步编辑（同名变量同时编辑）
+  "search_wrap": false, // 搜索不自动从头循环
+  "use_system_window_tabs": false, // 不使用系统原生窗口标签
+  // "zoomed_padding": false, // 禁用放大模式下的边距
+  // "bottom_dock_layout": "contained", // 底部面板布局方式
+  "cursor_shape": "block", // 光标形状（方块）
+  "show_edit_predictions": false, // 禁止显示编辑预测提示
+  "outline_panel": {
+    "dock": "right" // 大纲面板停靠在右侧
+  },
+  "edit_predictions": {
+    "mode": "subtle", // 预测提示样式为“轻微”
+    "copilot": {
+      "proxy": null, // Copilot 代理设置（未启用）
+      "proxy_no_verify": null,
+      "enterprise_uri": null
+    },
+    "enabled_in_text_threads": false // 文本对话中禁用预测
+  },
+  "debugger": {
+    "dock": "bottom" // 调试器面板在底部
+  },
+  "agent": {
+    "play_sound_when_agent_done": true, // AI 完成后播放提示音
+    "default_profile": "write", // 默认使用写作模式
+    "dock": "left", // 停靠位置在左侧
+    "always_allow_tool_actions": true, // 始终允许工具操作
+    "default_model": {
+      "provider": "deepseek", // 默认 AI 提供商
+      "model": "deepseek-chat" // 默认模型
+    }
+  },
+  "icon_theme": "Zed (Default)", // 图标主题
+  // "buffer_font_size": 18, // 字体大小（被注释）
+  // "buffer_font_family": "Noto Sans Mono", // 字体家族（被注释）
+  "buffer_font_family": "Noto Sans Mono", // 编辑器字体（等宽）
+  "buffer_font_size": 19, // 编辑器字体大小
+  "ui_font_size": 16.0, // 界面字体大小
+  "ui_font_family": "Noto Sans Mono", // 界面字体
+  "restore_on_startup": "none", // 启动时恢复上次工作区
+  "soft_wrap": "none", // 禁用自动换行
+  // "formatter": "language_server", // 使用语言服务器格式化
   "completions": {
-    "words": "disabled",
-    "lsp": true,
-    "lsp_fetch_timeout_ms": 150,
-    "lsp_insert_mode": "insert"
+    "words": "fallback", // 禁用词级补全
+    "lsp": true, // 禁用 LSP 补全
+    "lsp_fetch_timeout_ms": 100, // LSP 请求超时时间（毫秒）
+    "lsp_insert_mode": "insert" // 补全插入模式
   },
   "notification_panel": {
-    "button": true,
-    "dock": "right",
-    "default_width": 380
-  },
-  "theme": {
-    "mode": "dark",
-    "light": "Ayu Light",
-    "dark": "VSCode Dark Polished"
+    "button": true, // 显示通知按钮
+    "dock": "right", // 停靠在右侧
+    "default_width": 380 // 面板默认宽度
   },
   "file_types": {
-    "CMake": ["CMakeLists.txt"]
+    "CMake": ["CMakeLists.txt"] // 识别 CMake 文件类型
   },
   "indent_guides": {
-    "enabled": false,
-    "line_width": 1,
-    "active_line_width": 1,
-    "coloring": "fixed",
-    "background_coloring": "disabled"
+    "enabled": false, // 禁用缩进线
+    "line_width": 1, // 线宽
+    "active_line_width": 1, // 当前行线宽
+    "coloring": "fixed", // 固定颜色
+    "background_coloring": "disabled" // 禁用背景着色
   },
   "project_panel": {
-    "button": true,
-    "default_width": 240,
-    "dock": "left",
-    "entry_spacing": "comfortable",
-    "file_icons": true,
-    "folder_icons": true,
-    "git_status": true,
-    "indent_size": 20,
-    "auto_reveal_entries": true,
-    "auto_fold_dirs": true,
-    "drag_and_drop": true,
-    "scrollbar": {
-      "show": "never"
-    },
-    "sticky_scroll": false,
-    "show_diagnostics": "errors",
+    "button": true, // 显示项目按钮
+    "default_width": 240, // 默认宽度
+    "dock": "left", // 停靠左侧
+    "entry_spacing": "comfortable", // 条目间距
+    "file_icons": false, // 文件图标
+    "folder_icons": true, // 文件夹图标
+    "git_status": false, // 显示 Git 状态
+    "indent_size": 20, // 缩进大小
+    "auto_reveal_entries": false, // 自动定位到打开文件
+    "auto_fold_dirs": false, // 不自动折叠文件夹
+    "drag_and_drop": true, // 禁用拖拽
+    "sticky_scroll": false, // 禁用固定滚动
+    "show_diagnostics": "errors", // 仅显示错误
     "indent_guides": {
-      "show": "never"
+      "show": "never" // 不显示缩进线
     },
-
-    "hide_root": false,
-    "starts_open": false
+    "hide_root": false, // 显示项目根目录
+    "starts_open": false // 启动时不自动展开
   },
+
   // === 编辑与行为 ===
   // "auto_indent": true, // 自动缩进
   // "auto_indent_on_paste": true, // 粘贴时自动缩进
-  "auto_signature_help": false,
-  "show_signature_help_after_edits": false,
-  "ensure_final_newline_on_save": false, // 确保保存时有最后一个换行符
-  "extend_comment_on_newline": false, // 扩展换行注释
-  "autosave": "off", // 自动保存
-  "format_on_save": "off", // 禁用保存格式化
-  "inline_code_actions": false, // 显示内联代码操作
-  "lsp_highlight_debounce": 100,
+  "auto_signature_help": false, // 禁用函数签名提示
+  "show_signature_help_after_edits": false, // 编辑后不自动显示签名
+  "ensure_final_newline_on_save": false, // 保存时不强制加末尾换行
+  "extend_comment_on_newline": false, // 换行不自动扩展注释
+  "autosave": "off", // 禁用自动保存
+  "format_on_save": "off", // 禁用保存自动格式化
+  "inline_code_actions": false, // 不显示内联代码操作
+  "lsp_highlight_debounce": 100, // LSP 高亮延迟（毫秒）
   "title_bar": {
-    "show_branch_icon": false,
-    "show_branch_name": false,
-    "show_project_items": false,
-    "show_onboarding_banner": false,
-    "show_user_picture": true,
-    "show_sign_in": false,
-    "show_menus": false
+    "show_branch_icon": false, // 不显示分支图标
+    "show_branch_name": false, // 不显示分支名
+    "show_project_items": false, // 不显示项目项
+    "show_onboarding_banner": false, // 隐藏欢迎横幅
+    "show_user_picture": true, // 显示用户头像
+    "show_sign_in": false, // 隐藏登录入口
+    "show_menus": false // 隐藏菜单
   },
+
   // === 应用行为 ===
   "auto_update": false, // 禁用自动更新
-  "confirm_quit": true, // 退出软件确认
-  "disable_ai": true, // 禁用AI
-  "current_line_highlight": "gutter",
+  "confirm_quit": true, // 退出前确认
+  "disable_ai": false, // 完全禁用 AI 功能
+  "current_line_highlight": "gutter", // 高亮当前行左侧标识区
 
   // === 插件/扩展 ===
   "auto_install_extensions": {
-    "html": false,
-    "dockerfile": false,
-    "docker-compose": false
+    "html": false, // 不自动安装 HTML 扩展
+    "dockerfile": false, // 不自动安装 Dockerfile 扩展
+    "docker-compose": false // 不自动安装 Docker Compose 扩展
   },
 
   // === 界面元素 ===
   "scrollbar": {
-    "show": "always",
-    "cursors": true,
-    "git_diff": false,
-    "search_results": false,
-    "selected_text": false,
-    "selected_symbol": false,
-    "diagnostics": "warning",
+    "show": "auto", // 滚动条自动显示
+    "cursors": true, // 显示光标位置
+    "git_diff": false, // 不显示 Git diff
+    "search_results": true, // 显示搜索结果标记
+    "selected_text": false, // 不高亮选中区域
+    "selected_symbol": false, // 不高亮选中符号
+    "diagnostics": "warning", // 显示警告级诊断
     "axes": {
-      "horizontal": false,
-      "vertical": true
+      "horizontal": false, // 禁用水平滚动条
+      "vertical": true // 启用垂直滚动条
     }
   },
 
   // 标签栏
   "tab_bar": {
-    "show": true,
-    "show_nav_history_buttons": false,
-    "show_tab_bar_buttons": false
+    "show": true, // 显示标签栏
+    "show_nav_history_buttons": false, // 隐藏导航历史按钮
+    "show_tab_bar_buttons": false // 隐藏额外按钮
   },
 
   // 选项卡
   "tabs": {
-    "close_position": "right",
-    "file_icons": true,
-    "git_status": true,
-    "activate_on_close": "history",
-    "show_close_button": "hover",
-    "show_diagnostics": "errors"
+    "close_position": "right", // 关闭按钮在右
+    "file_icons": false, // 显示文件图标
+    "git_status": false, // 显示 Git 状态
+    "activate_on_close": "history", // 关闭后激活上一个历史标签
+    "show_close_button": "hover", // 悬停显示关闭按钮
+    "show_diagnostics": "errors" // 仅显示错误
   },
 
+  // === LSP 配置 ===
   "lsp": {
     "clangd": {
       "binary": {
-        "path": "E:\\deve\\clangd\\bin\\clangd.exe",
+        "path": "E:\\deve\\clangd\\bin\\clangd.exe", // clangd 路径
         "arguments": [
-          "--background-index", // 背景索引
-          "--completion-style=bundled", // 自动补全风格
+          "--background-index", // 启用后台索引
+          "--background-index-priority=low",
+          "--completion-style=detailed", // 补全风格
           "--header-insertion=never", // 不自动插入头文件
-          // "--compile-commands-dir=${workspaceFolder}/build", // cmake 或 xmake 构建目录
-          "-compile-commands-dir=build",
-          "--pch-storage=disk", // 预编译头存储到磁盘，减少内存占用
-          "--j=8", // 使用 4 个线程，可根据 CPU 调整
-          "--limit-results=30", // 自动补全结果限制
-          "--limit-references=30", // 查找引用限制
-          // "--resource-dir=E:/IDE/clangd/lib/clang/20/include", // Clang 内置头文件路径
-          "--log=error", // 只输出错误日志
-          "--enable-config", // 允许 clangd 配置文件
-          "--completion-parse=auto", // 智能补全解析
-          "--ranking-model=heuristics", // 补全排序启发式
-          "--header-insertion-decorators=false",
-          "--function-arg-placeholders=false",
-          "--all-scopes-completion=false",
-          "--pretty=false",
-          "--clang-tidy" // 启用 clang-tidy
+          "--compile-commands-dir=${workspaceFolder}", // 构建目录
+          "--pch-storage=disk", // 将 PCH 缓存到磁盘
+          // "--pch-storage=memory",
+          "--j=4", // 使用 4 个线程
+          "--limit-results=10", // 限制补全结果数量
+          "--limit-references=30", // 限制引用搜索数量
+          // "--resource-dir=E:/IDE/clangd/lib/clang/20/include", // 内置头文件路径
+          "--log=error", // 仅输出错误日志
+          "--enable-config", // 启用 clangd 配置文件
+          "--completion-parse=auto", // 自动解析补全
+          "--ranking-model=heuristics", // 启发式排序
+          "--header-insertion-decorators=false", // 禁止头文件提示装饰
+          "--function-arg-placeholders=0", // 禁止函数参数占位
+          "--all-scopes-completion=false", // 禁用跨作用域补全
+          "--pretty=false" // 禁用美化输出
+          // "--clang-tidy" // 启用 clang-tidy 检查
         ]
       }
     }
   },
+
   // 工具栏
   "toolbar": {
-    "breadcrumbs": false, // 显示路径导航
-    "quick_actions": false, // 显示快速操作按钮
-    "selections_menu": true, // 选中代码时的额外菜单
-    "agent_review": false, // AI Review 按钮
-    "code_actions": false // 显示代码修复/重构
+    "breadcrumbs": false, // 禁用路径导航
+    "quick_actions": false, // 禁用快速操作按钮
+    "selections_menu": true, // 启用选中代码菜单
+    "agent_review": false, // 禁用 AI Review 按钮
+    "code_actions": false // 禁用代码修复按钮
   },
 
   // 状态栏
   "status_bar": {
-    "active_language_button": true, // 显示语言模式
-    "cursor_position_button": false // 显示光标位置
+    "active_language_button": false, // 显示语言模式按钮
+    "cursor_position_button": false // 隐藏光标位置按钮
   },
 
   // === Git 与版本控制 ===
   "git": {
-    "gutter_debounce": null,
-    "git_gutter": "hide",
+    "gutter_debounce": null, // Git 刷新延迟（禁用）
+    "git_gutter": "hide", // 隐藏代码差异标记
     "inline_blame": {
-      "enabled": false
+      "enabled": false // 禁用行内作者标注
     },
     "branch_picker": {
-      "show_author_name": false
+      "show_author_name": false // 不显示作者名
     },
-    "hunk_style": "staged_hollow"
+    "hunk_style": "staged_hollow" // Hunk 样式：空心框
   },
 
   // === 文件扫描排除 ===
   "file_scan_exclusions": [
-    "**/.git",
-    "**/.svn",
-    "**/.hg",
-    "**/.jj",
-    "**/CVS",
-    "**/.DS_Store",
-    "**/Thumbs.db",
-    "**/.classpath",
-    "**/.settings"
+    "**/.git", // Git 文件夹
+    "**/.svn", // SVN 文件夹
+    "**/.hg", // Mercurial 文件夹
+    "**/.jj", // jj 文件夹
+    "**/CVS", // CVS
+    "**/.DS_Store", // macOS 系统文件
+    "**/Thumbs.db", // Windows 缩略图缓存
+    "**/.classpath", // Java 项目文件
+    "**/.settings" // Java 设置目录
   ],
 
   // === 遥测 ===
   "telemetry": {
-    "diagnostics": false,
-    "metrics": false
+    "diagnostics": false, // 禁用错误诊断上传
+    "metrics": false // 禁用使用统计
   }
 }
